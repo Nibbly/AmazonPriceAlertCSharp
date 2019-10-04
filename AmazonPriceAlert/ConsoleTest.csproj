@@ -36,9 +36,6 @@
     <Reference Include="HtmlAgilityPack, Version=1.11.15.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.15\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,16 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileManager.cs" />
-    <Compile Include="HtmlHelper.cs" />
-    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileManagement\FileManagement.csproj">
+      <Project>{bcc0dd6f-1868-4503-a16e-299b17406d80}</Project>
+      <Name>FileManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HtmlManagement\HtmlManagement.csproj">
+      <Project>{be454cf2-e028-4093-baec-79c567656c58}</Project>
+      <Name>HtmlManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{260e55e6-2dd4-41b0-a8c5-cf12c7de036a}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerializngManagement\SerializeManagement.csproj">
+      <Project>{b9c94cfd-6a20-417a-b442-c3af4ef4254b}</Project>
+      <Name>SerializeManagement</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

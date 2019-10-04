@@ -15,7 +15,7 @@ namespace AmazonPriceAlert
         public Serializer()
         {
             FileManager manager = new FileManager();
-            _filePathProducts = manager.ProductDataPath;
+            _filePathProducts = manager.ProductDataDirectory;
         }
 
         public void SerializeData(List<Product> productList)
